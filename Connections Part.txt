@@ -1,0 +1,48 @@
+
+*** SMART SOLAR ADAPTIVE LIGHTING SYSTEM ***
+-----------------------------------------------------------------------------------------------
+
+GOAL : 
+-> When there is DARK : (LDR)
+	-- if MOTION is DETECTED (PIR) then the LIGHT should GLOW with 100% EFFICIENCY
+	-- if MOTION is NOT DETECTED (PIR) then the LIGHT should GLOW with 50% EFFICIENCY
+-> Wen there is LIGHT :
+	-- Regardless of MOTION DETECTION ; LIGHT should be OFF 
+-----------------------------------------------------------------------------------------------
+
+CONNECETIONS :
+
+1. LED Strip with MOSFET (IRFZ44N)
+
++12V LED Strip → connect to battery + terminal
+
+LED Strip GND → connect to Drain of IRFZ44N
+
+Source of IRFZ44N → connect to battery – (GND)
+
+Gate of IRFZ44N → Arduino PWM pin (e.g., D9) via 220Ω resistor
+---------------
+2. LDR Circuit (Light Detection)
+
+VCC → 5V
+
+GND → GND
+
+DO → A0 pin of Arduino
+--------------
+3. PIR Sensor
+
+VCC → 5V
+
+GND → GND
+
+OUT → Arduino D2
+----------------------------
+4. Battery and Solar Panel
+
+Battery: 11.1V → powers the LED strip
+
+Arduino powered via buck converter or via USB/power jack
+
+Solar panel: optional charging circuit (not covered here unless needed)
+
