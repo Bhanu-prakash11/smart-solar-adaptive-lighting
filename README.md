@@ -23,9 +23,6 @@ When motion is detected in low light:
 When no motion but dark:
 - 50% brightness
 
-## 📷 Demo
-(Add images here)
-
 ## 🔮 Future Improvements
 - IoT monitoring
 - Mobile app integration
